@@ -8,8 +8,6 @@ import Select from '@mui/material/Select';
 import './Select.css'
 import { selectModes } from '../../../../store/app/selectors';
 
-
-
 const SelectComponent = ({mode, onSetMode}) => {
     
     const modes = useSelector(selectModes);

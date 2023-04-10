@@ -2,15 +2,18 @@
     width: 30%;
     margin: 1%;
     padding: 3%;
-    height: 550px;
-    overflow: scroll;
 }
 
 .list{
     list-style-type: none;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-inline-start: 1%;
 }
+
 .list li{
-    width: 100%;
+    width: 80%;
     height: 25px;
     background-color: #eec29e;
     border-radius: 10px;
