@@ -1,0 +1,21 @@
+.squares{
+    width: 30%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.list{
+    list-style-type: none;
+}
+.list li{
+    width: 100%;
+    height: 25px;
+    background-color: #eec29e;
+    border-radius: 10px;
+    color:#332010;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: start;
+    margin: 1%;
+    padding: 3%;
+}
