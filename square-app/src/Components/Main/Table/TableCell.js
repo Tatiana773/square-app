@@ -1,11 +1,17 @@
-import React, { useCallback, useState} from "react";
-import { useDispatch } from "react-redux";
+import React, { useCallback, useEffect, useState} from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { addCellAction, removeCellAction } from "../../../store/app/actions";
+import { selectisReset } from "../../../store/app/selectors";
 
 const TableCellComponent = ({cell, row}) =>{
 
     const [color, setColor] = useState("white");
+    const isReset = useSelector(selectisReset)
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+        if(isReset)setColor("white")
+    }, [isReset])
 
     const onOverElement = useCallback((event)=>{
         if(event.target.style.backgroundColor !== "blue"){

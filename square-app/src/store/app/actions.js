@@ -1,9 +1,8 @@
 export const GET_MODES_ACTION_REQUEST = "GET_MODES_ACTION_REQUEST"
 export const GET_MODES_ACTION_SUCCESS = "GET_MODES_ACTION_SUCCESS"
 export const GET_MODES_ACTION_FAILURE = "GET_MODES_ACTION_FAILURE"
-export const GET_MODE_ACTION_REQUEST = "GET_MODE_ACTION_REQUEST"
-export const GET_MODE_ACTION_SUCCESS = "GET_MODE_ACTION_SUCCESS"
-export const GET_MODE_ACTION_FAILURE = "GET_MODE_ACTION_FAILURE"
+export const SET_MODE_ACTION = "SET_MODE_ACTION"
+export const RESET_CELLS_ACTION = "RESET_CELLS_ACTION"
 export const ADD_CELL_ACTION = "ADD_CELL_ACTION"
 export const REMOVE_CELL_ACTION = "REMOVE_CELL_ACTION"
 
@@ -27,23 +26,16 @@ export const getModesActionFailure = (error) => {
     }
 }
 
-export const getModeActionRequest = () => {
+export const setModeAction= (data) => {
     return{
-        type: GET_MODE_ACTION_REQUEST,
+        type: SET_MODE_ACTION,
+        data
     }
 }
 
-export const getModeActionSuccess = (data) => {
+export const resetCellsAction= () => {
     return{
-        type: GET_MODE_ACTION_SUCCESS,
-        data,
-    }
-}
-
-export const getModeActionFailure = (error) => {
-    return{
-        type: GET_MODE_ACTION_FAILURE,
-        error,
+        type: RESET_CELLS_ACTION,
     }
 }
 

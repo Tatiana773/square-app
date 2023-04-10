@@ -1,8 +1,8 @@
 import React, {useState, useCallback} from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, } from 'react-redux';
 import StartButtonComponent from './StartButton/StartButton';
 import SelectComponent from './Select/Select';
-import { getModeItem } from '../../../store/app/thunks';
+import { resetCellsAction, setModeAction } from '../../../store/app/actions';
 import "./Mode.css";
 
 const ModeComponent = () => {
@@ -15,7 +15,8 @@ const ModeComponent = () => {
     }, [setCurrentMode]);
 
     const onStart= useCallback(() => {
-        dispatch(getModeItem(currentMode))
+        dispatch(setModeAction(currentMode))
+        dispatch(resetCellsAction())
     }, [currentMode, dispatch]);
 
     return(

@@ -16,12 +16,3 @@ export const getModesCollection = async () => {
     }
   );
 }
-
-export const getMode = async (path) => {
-    return await performRequest(
-      { 
-        method: "GET", 
-        url: baseUrl + "/" + path,
-      }
-    );
-  }

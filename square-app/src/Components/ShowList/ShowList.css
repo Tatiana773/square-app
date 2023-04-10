@@ -1,7 +1,9 @@
 .squares{
     width: 30%;
     margin: 1%;
-    padding: 1%;
+    padding: 3%;
+    height: 550px;
+    overflow: scroll;
 }
 
 .list{

@@ -28,7 +28,7 @@ const SelectComponent = ({mode, onSetMode}) => {
                 {modes.map((i)=>
                     <MenuItem 
                         key = {i.id} 
-                        value={i.id}
+                        value={i}
                     >
                         {i.name}
                     </MenuItem>
