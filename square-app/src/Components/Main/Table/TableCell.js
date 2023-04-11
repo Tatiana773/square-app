@@ -2,11 +2,12 @@ import React, { useCallback, useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCellAction, removeCellAction } from "../../../store/app/actions";
 import { selectisReset } from "../../../store/app/selectors";
+import PropTypes from 'prop-types';
 
 const TableCellComponent = ({cell, row}) =>{
 
     const [color, setColor] = useState("white");
-    const isReset = useSelector(selectisReset)
+    const isReset = useSelector(selectisReset);
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -39,4 +40,9 @@ const TableCellComponent = ({cell, row}) =>{
         </td>
     )
 }
-export default TableCellComponent
+export default TableCellComponent;
+
+TableCellComponent.propTypes = {
+    cell: PropTypes.number,
+    row: PropTypes.number,
+}

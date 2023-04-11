@@ -28,4 +28,4 @@ const TableComponent = () =>{
         </table>
     )
 }
-export default TableComponent
+export default TableComponent;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import "./StartButton.css";
+import PropTypes from 'prop-types';
 
 const StartButtonComponent = ({onClickStart}) => {
   return (
@@ -15,3 +16,7 @@ const StartButtonComponent = ({onClickStart}) => {
 }
 
 export default StartButtonComponent;
+
+StartButtonComponent.propTypes = {
+  onClickStart: PropTypes.func,
+}

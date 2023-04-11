@@ -5,8 +5,9 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import './Select.css'
+import './Select.css';
 import { selectModes } from '../../../../store/app/selectors';
+import PropTypes from 'prop-types';
 
 const SelectComponent = ({mode, onSetMode}) => {
     
@@ -26,7 +27,7 @@ const SelectComponent = ({mode, onSetMode}) => {
                 {modes.map((i)=>
                     <MenuItem 
                         key = {i.id} 
-                        value={i}
+                        value={i.id}
                     >
                         {i.name}
                     </MenuItem>
@@ -38,3 +39,8 @@ const SelectComponent = ({mode, onSetMode}) => {
 }
 
 export default SelectComponent;
+
+SelectComponent.propTypes = {
+    mode: PropTypes.string,
+    onSetMode: PropTypes.func,
+}
