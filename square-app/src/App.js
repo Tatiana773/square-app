@@ -8,6 +8,7 @@ import { selectError, selectIsLoading } from "./store/app/selectors";
 import LinearProgress from "@mui/material/LinearProgress";
 import Alert from "@mui/material/Alert";
 import { Grid } from "@mui/material";
+import Container from '@mui/material/Container';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -20,20 +21,22 @@ const App = () => {
   const isLoading = useSelector(selectIsLoading);
 
   return (
-    <div className="App">
-      {error && <Alert severity="error"> {error} </Alert>}
-      {isLoading && <LinearProgress />}
+    <Container>
+      <div className="App">
+        {error && <Alert severity="error"> {error} </Alert>}
+        {isLoading && <LinearProgress />}
 
-      <Grid container spacing={2}>
-        <Grid lg={6} md={6} sm={12} xs={12} item>
-          <GameArea />
-        </Grid>
+        <Grid container spacing={2}>
+          <Grid lg={6} md={6} sm={12} xs={12} item>
+            <GameArea />
+          </Grid>
 
-        <Grid lg={6} md={6} sm={12} xs={12} item>
-          <ResultList />
+          <Grid lg={6} md={6} sm={12} xs={12} item>
+            <ResultList />
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
+    </Container>
   );
 };
 

@@ -11,8 +11,8 @@ export const getModes = () => {
     dispatch(getModesActionRequest());
 
     try {
-      const responce = await getModesCollection();
-      dispatch(getModesActionSuccess(responce.data));
+      const response = await getModesCollection();
+      dispatch(getModesActionSuccess(response.data));
     } catch (error) {
       dispatch(getModesActionFailure(error.message));
     }
